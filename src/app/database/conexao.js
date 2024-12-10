@@ -29,7 +29,6 @@ export const consulta = (sql, valores='', mensagemReject) => {
 
             if(error) return reject(mensagemReject)
 
-            //fazer o parse dos resultados
             const row =  JSON.parse(JSON.stringify(result))  
 
             return resolve(row)
