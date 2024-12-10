@@ -3,8 +3,6 @@ import { consulta } from'../database/conexao.js'
 
 class MarcaRepository {
 
-    //CRUD
-
     create(marca){
         const sql = "INSERT INTO marcas SET ?;"
 
@@ -42,9 +40,6 @@ class MarcaRepository {
     
         return consulta(sql, id, 'Não foi possivel Apagar')
     }
-
-
-
 
 }
 

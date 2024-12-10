@@ -3,7 +3,6 @@ import MarcaRepository from '../repositories/MarcaRepository.js'
 
 class MarcaController {
 
-    // Para Listar Tudo
     async index(req, res){
         const result = await MarcaRepository.findAll()
 
@@ -12,7 +11,6 @@ class MarcaController {
 
 
 
-    // Para Listar por ID
     async show(req, res){
         const id = req.params.id
         const row = await MarcaRepository.findById(id)
@@ -22,7 +20,6 @@ class MarcaController {
 
 
 
-    // Para Criar Dados
     async store(req, res){
         const marca = req.body
         const row = await MarcaRepository.create(marca)
@@ -32,7 +29,6 @@ class MarcaController {
 
 
 
-    // Para Atualizar Dados
     async update(req, res){ 
         const id = req.params.id
         const marca = req.body
@@ -42,8 +38,7 @@ class MarcaController {
     }
 
 
-    
-    // Para Apagar Dados
+
     async delete(req, res){
         const id = req.params.id
         const row = await MarcaRepository.delete(id)
@@ -52,12 +47,5 @@ class MarcaController {
     
     }
 
-
-
 }
-
-
-
-
-// Padrão singleton
 export default new MarcaController()

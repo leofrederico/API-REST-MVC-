@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json()) 
 
-// Usando o Router
+
 app.use(routes)
 
 
